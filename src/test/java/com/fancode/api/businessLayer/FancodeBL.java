@@ -22,6 +22,7 @@ public class FancodeBL {
     private static ArrayList<String> listOfUserInFancode = new ArrayList<>();
 
     public FancodeBL verifyUserHasTodoTask() {
+        System.out.println("Get the todo task for the users");
         validatableResponse = FancodeAPI.getAPI(todoEndpoint);
         validatableResponse.assertThat().statusCode(successStatusCode);
         return this;
